@@ -51,13 +51,13 @@ public class Projectile : MonoBehaviour
             }
         }
         // Destroy on wall/ground collision
-        else if (collision.CompareTag("Ground") || collision.CompareTag("Wall"))
-        {
-            if (hitEffectPrefab != null)
-            {
-                Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
-            }
-            Destroy(gameObject);
-        }
+        //else if (collision.CompareTag("Ground") || collision.CompareTag("Wall"))
+        //{
+        //    if (hitEffectPrefab != null)
+        //    {
+        //        Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+        //    }
+        //    Destroy(gameObject);
+        //}
     }
 }
