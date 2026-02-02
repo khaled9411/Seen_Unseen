@@ -59,11 +59,15 @@ public class DraggablePlatform : MonoBehaviour
         Vector3 mousePos = GetMouseWorldPosition();
         offset = transform.position - mousePos;
 
-        if (spriteRenderer != null)
+        int childes = transform.childCount;
+        for (int i = 0; i < childes; i++)
         {
-            spriteRenderer.DOColor(dragColor, colorTransitionDuration);
+            spriteRenderer = transform.GetChild(i).GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.DOColor(dragColor, colorTransitionDuration);
+            }
         }
-
         //transform.DOScale(Vector3.one * 1.05f, 0.1f);
     }
 
@@ -96,9 +100,14 @@ public class DraggablePlatform : MonoBehaviour
     {
         isDragging = false;
 
-        if (spriteRenderer != null)
+        int childes = transform.childCount;
+        for (int i = 0; i < childes; i++)
         {
-            spriteRenderer.DOColor(normalColor, colorTransitionDuration);
+            spriteRenderer = transform.GetChild(i).GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.DOColor(normalColor, colorTransitionDuration);
+            }
         }
 
         //transform.DOScale(Vector3.one, 0.1f);
