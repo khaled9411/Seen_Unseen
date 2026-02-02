@@ -1630,6 +1630,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &208249499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 208249500}
+  m_Layer: 7
+  m_Name: Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &208249500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208249499}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08, y: 1.37, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1945504818}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &222608995
 GameObject:
   m_ObjectHideFlags: 0
@@ -18925,6 +18956,7 @@ GameObject:
   - component: {fileID: 1945504814}
   - component: {fileID: 1945504813}
   - component: {fileID: 1945504819}
+  - component: {fileID: 1945504820}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -18980,7 +19012,7 @@ Animator:
   m_GameObject: {fileID: 1945504812}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0908b073fd378f1458bc9062c39cb43b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7cdc5aef7ecd9c94183439a02055a53d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -19026,8 +19058,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.41139054, y: -0.030185938}
-  m_Size: {x: 0.8952813, y: 2.0603719}
+  m_Offset: {x: 0.114010334, y: -0.030185938}
+  m_Size: {x: 0.6696825, y: 2.0603719}
   m_Direction: 0
 --- !u!50 &1945504816
 Rigidbody2D:
@@ -19105,7 +19137,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1684687934892386565, guid: 97928943799da914eb7230cd64549725, type: 3}
+  m_Sprite: {fileID: -1360609648184034393, guid: 4b67854cce056d745a6705bd886195c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -19127,7 +19159,8 @@ Transform:
   m_LocalPosition: {x: -7.76, y: -2.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 208249500}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1945504819
@@ -19159,6 +19192,29 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   canMove: 1
+--- !u!114 &1945504820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945504812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40958ee10fc4e624ca762b2e14e1466e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
+  projectilePrefab: {fileID: 2280146071944214679, guid: d8a3f8362ea9e8c4aaa49af4841f0f1a, type: 3}
+  firePoint: {fileID: 208249500}
+  projectileSpeed: 15
+  shootCooldown: 0.5
+  isAutomatic: 0
+  animator: {fileID: 1945504814}
+  shootDelayInAnimation: 0.2
+  shootSound: {fileID: 0}
+  useRecoilEffect: 1
+  recoilStrength: 0.1
+  recoilDuration: 0.1
 --- !u!1 &1964694127
 GameObject:
   m_ObjectHideFlags: 0
