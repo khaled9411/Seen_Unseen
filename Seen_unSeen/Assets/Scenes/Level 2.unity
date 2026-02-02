@@ -18980,7 +18980,7 @@ MonoBehaviour:
   accelerationTime: 0.1
   decelerationTime: 0.2
   airControlPercentage: 0.6
-  jumpHeight: 4
+  jumpHeight: 0
   timeToJumpApex: 0.4
   fallMultiplier: 1.5
   lowJumpMultiplier: 2
