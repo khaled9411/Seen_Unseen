@@ -33,6 +33,8 @@ public class PlayerHealthController : MonoBehaviour
     private Camera mainCam;
     private Vector3 originalCamPos;
 
+    public int GetHealth() { return currentHealth; }
+
     [HideInInspector] public bool canMove = true;
 
     private void Awake()

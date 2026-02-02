@@ -42,8 +42,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Screen Shake")]
     [SerializeField] private Camera mainCamera;
-    [SerializeField] private float shakeDuration = 0.2f;
-    [SerializeField] private float shakeStrength = 0.1f;
 
     // Components
     private Rigidbody2D rb;

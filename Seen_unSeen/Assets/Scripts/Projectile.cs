@@ -32,6 +32,13 @@ public class Projectile : MonoBehaviour
                 playerHealth.TakeDamage(damage, attaker);
             }
 
+            // Deal damage to enemy
+            EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
+            if(enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damage);
+            }
+
             // Spawn hit effect
             if (hitEffectPrefab != null)
             {

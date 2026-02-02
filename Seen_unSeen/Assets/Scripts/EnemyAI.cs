@@ -47,7 +47,6 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private Color normalColor = Color.white;
     [SerializeField] private Color telegraphColor = Color.red;
     [SerializeField] private Color stunColor = Color.gray;
-    [SerializeField] private float punchScale = 1.2f;
     [SerializeField] private float squashAmount = 0.9f;
 
     [Header("References")]
